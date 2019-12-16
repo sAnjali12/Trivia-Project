@@ -1,0 +1,18 @@
+{
+  "name": "validation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "trivia.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "g": "^2.0.1",
+    "knex": "^0.20.4",
+    "mysql": "^2.17.1"
+  }
+}
