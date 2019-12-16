@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script language="javascript" type="text/javascript">
+    $(document).ready(function () {
+      $.ajax({
+        type: "GET",
+        url: "http://localhost:3000/get",
+        data: "{}",
+        dataType: "json",
+        contentType: "application/json; charset=utf-8",
+        async: true,
+        success: OnSuccess,
+        error: OnError
+      })
+    });
+    function OnSuccess(data) {
+      data.map(question => {
+        $("#questions").append("<li>" + question.Questions + "<br>" + "Answer: " + question.Answer + "</li>"+ "<br>");
+      })
+    }
+    function OnError(data) {
+    }
+  </script>
+</head>
+<body>
+<div>
+    <ol id="questions">
+  
+    </ol>
+</div>
+</body>
+</html>
